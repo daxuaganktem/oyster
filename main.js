@@ -1,0 +1,12 @@
+﻿'use strict';
+const OysterCard = require('./OysterCard.class.js');
+let card = new OysterCard();
+card.setCredit(30);
+card.enterStation(OysterCard.STATIONS.Holborn);
+card.setNewJourney(OysterCard.STATIONS.EarlsCourt);
+card.exitStation();
+card.setNewBusJourney();
+card.enterStation(OysterCard.STATIONS.EarlsCourt);
+card.setNewJourney(OysterCard.STATIONS.Hammersmith);
+card.exitStation();
+console.log('Remaining Credit: ', card.getCredit());
